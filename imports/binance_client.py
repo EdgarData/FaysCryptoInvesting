@@ -22,7 +22,7 @@ from binance import BinanceSocketManager, ThreadedWebsocketManager
 import pytz
 
 
-class BinanceSocketThread:
+class BinanceClient:
     """
 
     """
@@ -95,7 +95,6 @@ class BinanceSocketThread:
 
         else:
             return None
-
 
     def download_klines(self, start_str, end_str):
         """

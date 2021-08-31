@@ -10,7 +10,7 @@ from datetime import datetime
 # Añadir paquetes de Fays Crypto Investing
 print('Importing pkgs...')
 sys.path.append('imports')
-from imports.binance_client import BinanceSocketThread
+from imports.binance_client import BinanceClient
 
 
 if __name__ == '__main__':
@@ -21,16 +21,16 @@ if __name__ == '__main__':
     end_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Hora final del período
 
     # Binance Socket Thread
-    bst = BinanceSocketThread(symbol='BNBBTC', interval='5m')
+    bc = BinanceClient(symbol='BNBBTC', interval='5m')
 
     # Descargar data histórica.
-    bst.download_klines(start_str=start_str, end_str=end_str)
+    bc.download_klines(start_str=start_str, end_str=end_str)
 
-    bst.run()
+    bc.run()
 
     prev_kline = ''
     while True:
-        df_klines = bst.get_klines()
+        df_klines = bc.get_klines()
 
         if df_klines is not None:
             last_kline = df_klines.iloc[-1]
