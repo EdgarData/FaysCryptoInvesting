@@ -1,0 +1,2 @@
+# FaysCryptoInvesting
+FaysCryptoInvesting NuclioDigitalSchool Project
