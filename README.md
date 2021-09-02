@@ -4,7 +4,7 @@ Fays - CryptoInvesting
 Autores:
 
     - Sergio Masa Avís (sergio.masavi@gmail.com).
-    - Edgar ........
+    - Edgar Plascencia (e.mercado@usal.es).
 
 
 Recursos:
